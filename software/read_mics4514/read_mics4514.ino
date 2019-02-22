@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 /***************************************************************************
   This is a example for the MISC4514 NO2 & CO sensor
 
@@ -115,3 +116,108 @@ void loop() {
     
   delay(1000);
 }
+=======
+
+#define Serial SerialUSB
+
+//analog read
+int ox=0;
+int red=0;
+int co2=0;
+int no2=0;
+
+//Value voltaje
+float vox=0;
+float vred=0;
+float vco2=0;
+float vno2=0;
+
+//Value resistencia
+float rox=0;
+float rred=0;
+float rco2=0;
+float rno2=0;
+
+//parametro indice co
+ float inppmox=0;
+ float inppmred=0;
+ float inppmco2=0;
+ float inppmno2=0;
+
+void setup() {
+  //resolution analog reads
+   analogReadResolution(12);
+   Serial.begin(9600);
+
+  //pre heating
+  pinMode(2,OUTPUT);
+  Serial.println("pre heating");
+  digitalWrite(2, HIGH);
+  delay (30000);
+  Serial.println("pre heating done");
+  digitalWrite(2, LOW);
+}
+
+void loop() {
+  //GET SENSOR DATA
+ ox=analogRead(A0);
+ red=analogRead(A1);
+ co2=analogRead(A2);
+ no2=analogRead(A3);
+
+    Serial.print(red);
+    Serial.print(",");
+    Serial.print(co2);
+    Serial.print(",");
+    Serial.print(ox);
+    Serial.print(",");
+    Serial.print(no2);
+    Serial.print(",");
+    
+   //change to voltaje
+  vox=(3.3*ox)/4096;
+  vred=3.3-((3.3*red)/4096);
+  vco2=3.3-((3.3*co2)/4096);
+  vno2=(3.3*no2)/4096;
+  
+    Serial.print(vred);
+    Serial.print(",");
+    Serial.print(vco2);
+    Serial.print(",");
+    Serial.print(vox);
+    Serial.print(",");
+    Serial.print(vno2);
+    Serial.print(",");
+
+    //change to resistencia
+  rox=((3.3*270)/vox)-270;//load resistor in ox 270ohm
+  rred=((3.3-vred)*47000)/vred;//load resistor in red 1ohm
+  rco2=((3.3-vco2)*47000)/vco2;
+  rno2=((3.3*270)/vno2)-270;
+
+    Serial.print(rred);
+    Serial.print(",");
+    Serial.print(rco2);
+    Serial.print(",");
+    Serial.print(rox);
+    Serial.print(",");
+    Serial.print(rno2);
+    Serial.print(",");
+
+    //RS/R0
+  inppmox=270/rox;
+  inppmred=47000/rred;
+  inppmco2=47000/rco2;
+  inppmno2=270/rno2;
+
+    Serial.print(inppmred);
+    Serial.print(",");
+    Serial.print(inppmco2);
+    Serial.print(",");   
+    Serial.print(inppmox);
+    Serial.print(",");
+    Serial.println(inppmno2);
+    
+ delay(1000);
+}
+>>>>>>> Stashed changes
