@@ -38,6 +38,7 @@ void setup() {
   analogReadResolution(12);
   Serial.begin(9600);
   //pre heating
+  while(!Serial)
   pinMode(9,OUTPUT);
   Serial.println("pre heating");
   digitalWrite(9, HIGH);
@@ -64,8 +65,10 @@ void loop() {
   ppmCO=(4.4138*pow(conCO,-1.178));
   ppmNO2= ((-0.0003*(conNO2*conNO2))+(0.1626*conNO2)-0.0217);
   Serial.print("PPM CO");
+  Serial.print(" ");
   Serial.print(ppmCO);
   Serial.print("PPM NO2");
+   Serial.print(" ");
   Serial.println(ppmNO2);
  
   delay(1000);

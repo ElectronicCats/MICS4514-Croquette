@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:breakboard_MICS4514-cache
-EELAYER 26 0
+EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L electroniccats:MICS-4514 U2
+L breakboard_MICS4514-rescue:MICS-4514-electroniccats U2
 U 1 1 5C5C9644
 P 6730 2780
 F 0 "U2" H 6730 3247 50  0000 C CNN
@@ -127,7 +127,7 @@ L Device:R R5
 U 1 1 5C5CA004
 P 5190 3310
 F 0 "R5" H 5260 3356 50  0000 L CNN
-F 1 "22k" H 5260 3265 50  0000 L CNN
+F 1 "269" H 5260 3265 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5120 3310 50  0001 C CNN
 F 3 "https://www.mouser.mx/datasheet/2/348/esr-e-1139161.pdf" H 5190 3310 50  0001 C CNN
 F 4 "ESR10EZPJ271" H 5190 3310 50  0001 C CNN "manf#"
@@ -321,70 +321,56 @@ Connection ~ 6980 5040
 Wire Wire Line
 	6980 5040 7080 5040
 $Comp
-L Connector:Conn_01x07_Female J1
-U 1 1 5C5D8712
-P 7760 3800
-F 0 "J1" H 7788 3826 50  0000 L CNN
-F 1 "outputs" H 7788 3735 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 7760 3800 50  0001 C CNN
-F 3 "~" H 7760 3800 50  0001 C CNN
-	1    7760 3800
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+3V3 #PWR08
 U 1 1 5C5D9752
-P 6830 3420
-F 0 "#PWR08" H 6830 3270 50  0001 C CNN
-F 1 "+3V3" H 6845 3593 50  0000 C CNN
-F 2 "" H 6830 3420 50  0001 C CNN
-F 3 "" H 6830 3420 50  0001 C CNN
-	1    6830 3420
+P 7070 3640
+F 0 "#PWR08" H 7070 3490 50  0001 C CNN
+F 1 "+3V3" H 7085 3813 50  0000 C CNN
+F 2 "" H 7070 3640 50  0001 C CNN
+F 3 "" H 7070 3640 50  0001 C CNN
+	1    7070 3640
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR07
 U 1 1 5C5D97A5
-P 6830 3740
-F 0 "#PWR07" H 6830 3490 50  0001 C CNN
-F 1 "GND" H 6835 3567 50  0000 C CNN
-F 2 "" H 6830 3740 50  0001 C CNN
-F 3 "" H 6830 3740 50  0001 C CNN
-	1    6830 3740
+P 7070 3820
+F 0 "#PWR07" H 7070 3570 50  0001 C CNN
+F 1 "GND" H 7075 3647 50  0000 C CNN
+F 2 "" H 7070 3820 50  0001 C CNN
+F 3 "" H 7070 3820 50  0001 C CNN
+	1    7070 3820
 	1    0    0    -1  
 $EndComp
-Text Label 7460 3600 2    50   ~ 0
+Text Label 7310 4100 2    50   ~ 0
 PRE_HEALTING
-Text Label 7460 3800 2    50   ~ 0
-OX
-Text Label 7460 3900 2    50   ~ 0
-RED
-Text Label 7460 4100 2    50   ~ 0
+Text Label 7310 4000 2    50   ~ 0
 NO2
-Text Label 7460 4000 2    50   ~ 0
+Text Label 7310 3900 2    50   ~ 0
 CO2
-Wire Wire Line
-	7460 3600 7560 3600
-Wire Wire Line
-	7460 3800 7560 3800
-Wire Wire Line
-	7460 3900 7560 3900
-Wire Wire Line
-	7460 4000 7560 4000
-Wire Wire Line
-	7460 4100 7560 4100
 Wire Wire Line
 	5190 3820 5190 3460
 Wire Wire Line
 	4870 3820 4870 3460
-Wire Wire Line
-	6830 3740 6830 3700
-Wire Wire Line
-	6830 3700 7560 3700
-Wire Wire Line
-	7560 3500 6830 3500
-Wire Wire Line
-	6830 3500 6830 3420
 Text Label 6080 4940 2    50   ~ 0
 RED
+$Comp
+L Connector:Conn_01x05_Female J1
+U 1 1 5CFFB1C2
+P 7510 3900
+F 0 "J1" H 7538 3926 50  0000 L CNN
+F 1 "OUTPUTS" H 7538 3835 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 7510 3900 50  0001 C CNN
+F 3 "~" H 7510 3900 50  0001 C CNN
+	1    7510 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7070 3640 7070 3700
+Wire Wire Line
+	7070 3700 7310 3700
+Wire Wire Line
+	7310 3800 7070 3800
+Wire Wire Line
+	7070 3800 7070 3820
 $EndSCHEMATC
