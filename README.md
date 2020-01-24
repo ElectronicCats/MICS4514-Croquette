@@ -1,4 +1,4 @@
-# MICS4514 Breakout Board
+# Electronic Cats Croquette MICS4514
 
 Electronic Cats invests time and resources providing this open source design, please support Electronic Cats and open-source hardware by purchasing products from Electronic Cats!
 
