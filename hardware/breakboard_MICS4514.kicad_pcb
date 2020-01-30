@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 21)
+    (drawings 20)
     (tracks 63)
     (zones 0)
     (modules 28)
@@ -16,14 +16,14 @@
   )
 
   (layers
-    (0 F.Cu signal)
-    (31 B.Cu signal)
+    (0 F.Cu signal hide)
+    (31 B.Cu signal hide)
     (32 B.Adhes user)
     (33 F.Adhes user)
     (34 B.Paste user)
     (35 F.Paste user)
     (36 B.SilkS user)
-    (37 F.SilkS user)
+    (37 F.SilkS user hide)
     (38 B.Mask user)
     (39 F.Mask user)
     (40 Dwgs.User user)
@@ -183,7 +183,7 @@
       (xy -1.27 0.062776) (xy -1.27 0.907142) (xy 1.27 0.907142) (xy 1.27 -0.907143)) (layer B.SilkS) (width 0.01))
   )
 
-  (module Aesthetics:HL (layer B.Cu) (tedit 0) (tstamp 5E2AE6FC)
+  (module Aesthetics:HL (layer B.Cu) (tedit 0) (tstamp 5E334438)
     (at 154.28 110.33 270)
     (fp_text reference G*** (at 0 0 270) (layer B.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3)) (justify mirror))
@@ -2803,9 +2803,6 @@
   (gr_arc (start 139.191999 111.112174) (end 133.4643 111.074075) (angle -90.3811193) (layer Edge.Cuts) (width 0.15) (tstamp 5DFD6961))
   (gr_arc (start 139.5547 95.707199) (end 139.192 89.408) (angle -86.57969858) (layer Edge.Cuts) (width 0.15) (tstamp 5DFD692A))
   (gr_arc (start 159.880301 95.211901) (end 165.608 95.25) (angle -90.3811193) (layer Edge.Cuts) (width 0.15))
-  (gr_text 3v (at 144.018 109.315334 90) (layer B.SilkS)
-    (effects (font (size 1 1) (thickness 0.25)) (justify mirror))
-  )
   (gr_text "CROQUETTE\nMICS4514" (at 149.098 98.044) (layer B.SilkS)
     (effects (font (size 1.5 1.4) (thickness 0.35)) (justify mirror))
   )
