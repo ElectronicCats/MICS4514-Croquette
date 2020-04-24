@@ -20,8 +20,8 @@
   )
 
   (layers
-    (0 F.Cu signal)
-    (31 B.Cu signal)
+    (0 F.Cu signal hide)
+    (31 B.Cu signal hide)
     (32 B.Adhes user)
     (33 F.Adhes user)
     (34 B.Paste user)
@@ -214,7 +214,7 @@
   )
 
   (module Aesthetics:Croquette50,5x9,9 (layer F.Cu) (tedit 5EA32E63) (tstamp 5EA39970)
-    (at 138 103.5)
+    (at 138 102.5)
     (fp_text reference G*** (at 0 0) (layer F.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3)))
     )
