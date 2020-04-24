@@ -1,16 +1,15 @@
 EESchema Schematic File Version 4
-LIBS:breakboard_MICS4514-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "Breakboard MICS4514"
-Date "2019-02-07"
-Rev ""
-Comp "ELECTRONIC CATS "
+Date "2020-04-24"
+Rev "v1.0"
+Comp "Electronic Cats"
 Comment1 "ROCIO RODRIGUEZ"
-Comment2 ""
+Comment2 "Eduardo Contreras"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -48,30 +47,6 @@ F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5440 3310 50  0
 F 3 "https://www.mouser.mx/datasheet/2/427/crcwce3-1223726.pdf" H 5510 3310 50  0001 C CNN
 F 4 "CRCW080530R0FKEAC" H 5510 3310 50  0001 C CNN "manf#"
 	1    5510 3310
-	1    0    0    -1  
-$EndComp
-$Comp
-L Amplifier_Operational:TLC272 U1
-U 1 1 5C5C9A60
-P 4890 5060
-F 0 "U1" H 4890 5427 50  0000 C CNN
-F 1 "TLC2272" H 4890 5336 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4890 5060 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tlc2272.pdf" H 4890 5060 50  0001 C CNN
-F 4 "TLC2272CD" H 4890 5060 50  0001 C CNN "manf#"
-	1    4890 5060
-	1    0    0    -1  
-$EndComp
-$Comp
-L Amplifier_Operational:TLC272 U1
-U 2 1 5C5C9ABF
-P 6640 5040
-F 0 "U1" H 6640 5407 50  0000 C CNN
-F 1 "TLC2272" H 6640 5316 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6640 5040 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tlc2272.pdf" H 6640 5040 50  0001 C CNN
-F 4 "TLC2272CD" H 10  600 50  0001 C CNN "manf#"
-	2    6640 5040
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -373,4 +348,139 @@ Wire Wire Line
 	7310 3800 7070 3800
 Wire Wire Line
 	7070 3800 7070 3820
+$Comp
+L Amplifier_Operational:TLC272 U1
+U 1 1 5C5C9A60
+P 4890 5060
+F 0 "U1" H 4890 5427 50  0000 C CNN
+F 1 "TLC2272" H 4890 5336 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4890 5060 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tlc2272.pdf" H 4890 5060 50  0001 C CNN
+F 4 "TLC2272CD" H 4890 5060 50  0001 C CNN "manf#"
+	1    4890 5060
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:TLC272 U1
+U 2 1 5C5C9ABF
+P 6640 5040
+F 0 "U1" H 6640 5407 50  0000 C CNN
+F 1 "TLC2272" H 6640 5316 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 6640 5040 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tlc2272.pdf" H 6640 5040 50  0001 C CNN
+F 4 "TLC2272CD" H 10  600 50  0001 C CNN "manf#"
+	2    6640 5040
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM2904 U1
+U 3 1 5EA41EC3
+P 5825 5025
+F 0 "U1" H 5783 5071 50  0000 L CNN
+F 1 "TLC2272" H 5783 4980 50  0000 L CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5825 5025 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tlc2272.pdf" H 5825 5025 50  0001 C CNN
+	3    5825 5025
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR09
+U 1 1 5EA54096
+P 5725 4630
+F 0 "#PWR09" H 5725 4480 50  0001 C CNN
+F 1 "+3V3" H 5740 4803 50  0000 C CNN
+F 2 "" H 5725 4630 50  0001 C CNN
+F 3 "" H 5725 4630 50  0001 C CNN
+	1    5725 4630
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5725 4630 5725 4725
+$Comp
+L power:GND #PWR012
+U 1 1 5EA5A6B2
+P 5725 5485
+F 0 "#PWR012" H 5725 5235 50  0001 C CNN
+F 1 "GND" H 5730 5312 50  0000 C CNN
+F 2 "" H 5725 5485 50  0001 C CNN
+F 3 "" H 5725 5485 50  0001 C CNN
+	1    5725 5485
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5725 5485 5725 5325
+$Comp
+L Device:C_Small C1
+U 1 1 5EA5E613
+P 7500 5025
+F 0 "C1" H 7592 5071 50  0000 L CNN
+F 1 "0.1uF" H 7592 4980 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7500 5025 50  0001 C CNN
+F 3 "~" H 7500 5025 50  0001 C CNN
+	1    7500 5025
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR010
+U 1 1 5EA5FC47
+P 7500 4840
+F 0 "#PWR010" H 7500 4690 50  0001 C CNN
+F 1 "+3V3" H 7515 5013 50  0000 C CNN
+F 2 "" H 7500 4840 50  0001 C CNN
+F 3 "" H 7500 4840 50  0001 C CNN
+	1    7500 4840
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 4840 7500 4925
+$Comp
+L power:GND #PWR011
+U 1 1 5EA61FB4
+P 7500 5275
+F 0 "#PWR011" H 7500 5025 50  0001 C CNN
+F 1 "GND" H 7505 5102 50  0000 C CNN
+F 2 "" H 7500 5275 50  0001 C CNN
+F 3 "" H 7500 5275 50  0001 C CNN
+	1    7500 5275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 5125 7500 5275
+$Comp
+L Device:C_Small C2
+U 1 1 5EA37C23
+P 7925 2700
+F 0 "C2" H 8017 2746 50  0000 L CNN
+F 1 "0.1uF" H 8017 2655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7925 2700 50  0001 C CNN
+F 3 "~" H 7925 2700 50  0001 C CNN
+	1    7925 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR013
+U 1 1 5EA37C2D
+P 7925 2515
+F 0 "#PWR013" H 7925 2365 50  0001 C CNN
+F 1 "+3V3" H 7940 2688 50  0000 C CNN
+F 2 "" H 7925 2515 50  0001 C CNN
+F 3 "" H 7925 2515 50  0001 C CNN
+	1    7925 2515
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7925 2515 7925 2600
+$Comp
+L power:GND #PWR014
+U 1 1 5EA37C38
+P 7925 2950
+F 0 "#PWR014" H 7925 2700 50  0001 C CNN
+F 1 "GND" H 7930 2777 50  0000 C CNN
+F 2 "" H 7925 2950 50  0001 C CNN
+F 3 "" H 7925 2950 50  0001 C CNN
+	1    7925 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7925 2800 7925 2950
 $EndSCHEMATC
